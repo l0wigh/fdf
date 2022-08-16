@@ -1,0 +1,11 @@
+.DS_Store
+a.out
+a.out.dSYM
+test
+tester
+main.c
+*.a
+*.o
+*.gch
+*.swp
+.idea
