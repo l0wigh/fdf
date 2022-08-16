@@ -6,7 +6,7 @@
 /*   By: thomathi <thomathi@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 16:30:04 by thomathi          #+#    #+#             */
-/*   Updated: 2022/08/16 17:34:32 by thomathi         ###   ########.fr       */
+/*   Updated: 2022/08/16 18:27:54 by thomathi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void	fdf_initialize(t_fdf *fdf, char *file)
 	fdf->mlx_ptr = mlx_init();
 	fdf->mlx_win = mlx_new_window(fdf->mlx_ptr, WIDTH, HEIGHT, "FdF");
 	fdf->colors = 0x00ff00;
+	fdf->terrain = 2;
 	fdf->height = fdf_getinfos(fdf->fd, 1);
 	fdf_co(fdf, file);
 	fdf->width = fdf_getinfos(fdf->fd, 2);

@@ -6,7 +6,7 @@
 /*   By: thomathi <thomathi@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 16:50:04 by thomathi          #+#    #+#             */
-/*   Updated: 2022/08/16 18:22:14 by thomathi         ###   ########.fr       */
+/*   Updated: 2022/08/16 18:28:35 by thomathi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,11 @@ void	fdf_bresenham_dv6ted4(t_fdf *fdf, int x, int y)
 	i0 = malloc(sizeof(int) * 3);
 	i1 = malloc(sizeof(int) * 3);
 
-	i0[2] = fdf->map[y][x];
+	i0[2] = fdf->map[y][x] * fdf->terrain;
 	i0[0] = (WIDTH / 3) + (x - y) * 24;
 	i0[1] = (HEIGHT / 3) + (x + y) * 9 - i0[2];
 	x++;
-	i1[2] = fdf->map[y][x];
+	i1[2] = fdf->map[y][x] * fdf->terrain;
 	i1[0] = (WIDTH / 3) + (x - y) * 24;
 	i1[1] = (HEIGHT / 3) + (x + y) * 9 - i1[2];
 	select_engine(fdf, i0, i1);
@@ -52,10 +52,11 @@ void	fdf_bresenham_ep6dts(t_fdf *fdf, int x, int y)
 	i1 = malloc(sizeof(int) * 3);
 
 	i0[2] = fdf->map[y][x];
+	i0[2] = fdf->map[y][x] * fdf->terrain;
 	i0[0] = (WIDTH / 3) + (x - y) * 24;
 	i0[1] = (HEIGHT / 3) + (x + y) * 9 - i0[2];
 	y++;
-	i1[2] = fdf->map[y][x];
+	i1[2] = fdf->map[y][x] * fdf->terrain;
 	i1[0] = (WIDTH / 3) + (x - y) * 24;
 	i1[1] = (HEIGHT / 3) + (x + y) * 9 - i1[2];
 	select_engine(fdf, i0, i1);

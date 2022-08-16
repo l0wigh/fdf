@@ -6,7 +6,7 @@
 /*   By: thomathi <thomathi@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 16:23:12 by thomathi          #+#    #+#             */
-/*   Updated: 2022/08/16 17:35:09 by thomathi         ###   ########.fr       */
+/*   Updated: 2022/08/16 18:27:54 by thomathi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ typedef struct s_fdf
 	int		width;
 	int		colors;
 	int		fd;
+	int		terrain;
 	int		*mlx_ptr;
 	int		*mlx_win;
 	int		*img_ptr;
