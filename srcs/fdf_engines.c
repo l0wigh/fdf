@@ -6,7 +6,7 @@
 /*   By: thomathi <thomathi@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 17:05:15 by thomathi          #+#    #+#             */
-/*   Updated: 2022/08/16 18:21:56 by thomathi         ###   ########.fr       */
+/*   Updated: 2022/08/16 18:43:45 by thomathi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	dv6ted4(t_fdf *fdf, t_bres *s, int *i0)
 	int i;
 	
 	i = 0;
-	while (i <= s->dx_x)
+	while (i < s->dx_x)
 	{
 		put_pixel(fdf, i0[0], i0[1]);
 		i++;
@@ -36,7 +36,7 @@ void	ep6dts(t_fdf *fdf, t_bres *s, int *i0)
 	int i;
 	
 	i = 0;
-	while (i <= s->dy_x)
+	while (i < s->dy_x)
 	{
 		put_pixel(fdf, i0[0], i0[1]);
 		i++;

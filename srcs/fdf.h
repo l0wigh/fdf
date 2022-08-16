@@ -6,7 +6,7 @@
 /*   By: thomathi <thomathi@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 16:23:12 by thomathi          #+#    #+#             */
-/*   Updated: 2022/08/16 18:27:54 by thomathi         ###   ########.fr       */
+/*   Updated: 2022/08/16 18:42:23 by thomathi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,10 @@
 
 # define WIDTH 640 * 2
 # define HEIGHT 480 * 2
+/* # define ISOX 24 */
+/* # define ISOY 9 */
+# define ISOX 31
+# define ISOY 16
 
 typedef struct s_fdf
 {
