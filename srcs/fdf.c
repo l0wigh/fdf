@@ -6,7 +6,7 @@
 /*   By: thomathi <thomathi@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 16:30:04 by thomathi          #+#    #+#             */
-/*   Updated: 2022/08/18 22:34:55 by thomathi         ###   ########.fr       */
+/*   Updated: 2022/08/18 22:54:35 by thomathi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	fdf_initialize(t_fdf *fdf, char *file)
 
 int	fdf_check_extension(char *file)
 {
-	int i;
+	int	i;
 
 	i = ft_strlen(file);
 	if (file[i - 1] != 'f')
@@ -65,10 +65,10 @@ int	fdf_check_extension(char *file)
 	return (1);
 }
 
-int main(int argc, char *argv[])
+int	main(int argc, char *argv[])
 {
 	t_fdf	*fdf;
-	
+
 	fdf = (t_fdf *) malloc(sizeof(t_fdf));
 	if (argc != 2)
 		fdf_errors(1);
@@ -79,6 +79,5 @@ int main(int argc, char *argv[])
 		fdf_errors_open(argv[1]);
 	fdf_initialize(fdf, argv[1]);
 	fdf_main(fdf);
-
 	return (0);
 }

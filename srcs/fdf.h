@@ -6,7 +6,7 @@
 /*   By: thomathi <thomathi@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 16:23:12 by thomathi          #+#    #+#             */
-/*   Updated: 2022/08/18 22:20:08 by thomathi         ###   ########.fr       */
+/*   Updated: 2022/08/18 22:54:52 by thomathi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,8 @@ typedef struct s_bres
 	int	dy_x;
 	int	ex;
 	int	ey;
-	int x_inc;
-	int y_inc;
+	int	x_inc;
+	int	y_inc;
 }	t_bres;
 
 void	fdf_errors(int err);

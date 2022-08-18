@@ -6,7 +6,7 @@
 /*   By: thomathi <thomathi@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 15:17:27 by thomathi          #+#    #+#             */
-/*   Updated: 2022/08/18 22:20:32 by thomathi         ###   ########.fr       */
+/*   Updated: 2022/08/18 22:52:19 by thomathi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 int	fdf_exit_procedure(t_fdf *fdf)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	mlx_destroy_image(fdf->mlx_ptr, fdf->img_ptr);
 	mlx_destroy_window(fdf->mlx_ptr, fdf->mlx_win);
-	while(i < fdf->height)
+	while (i < fdf->height)
 	{
 		free(fdf->map[i]);
 		i++;
@@ -33,10 +33,10 @@ int	fdf_exit_procedure(t_fdf *fdf)
 
 void	fdf_exit_procedure_bis(t_fdf *fdf)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while(i < fdf->height)
+	while (i < fdf->height)
 	{
 		free(fdf->map[i]);
 		i++;

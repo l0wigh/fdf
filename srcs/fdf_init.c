@@ -6,7 +6,7 @@
 /*   By: thomathi <thomathi@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 16:42:47 by thomathi          #+#    #+#             */
-/*   Updated: 2022/08/18 22:22:40 by thomathi         ###   ########.fr       */
+/*   Updated: 2022/08/18 22:51:43 by thomathi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	fdf_malloc_map(t_fdf *fdf)
 {
-	int i;
-	
+	int	i;
+
 	i = 0;
 	fdf->map = malloc(fdf->height * sizeof(int *));
 	while (i < fdf->height)
@@ -28,10 +28,10 @@ void	fdf_malloc_map(t_fdf *fdf)
 
 int	fdf_getinfos(int fd, int mode)
 {
-	int	i;
-	char *line;
-	char **line_elem;
-	
+	int		i;
+	char	*line;
+	char	**line_elem;
+
 	i = 0;
 	line = get_next_line(fd);
 	if (mode == 1)
@@ -53,7 +53,7 @@ int	fdf_getinfos(int fd, int mode)
 
 int	fdf_readmap_loop(t_fdf *fdf, char **line_elem, int y)
 {
-	int x;
+	int	x;
 
 	x = 0;
 	while (line_elem[x])
@@ -65,7 +65,6 @@ int	fdf_readmap_loop(t_fdf *fdf, char **line_elem, int y)
 	}
 	return (x);
 }	
-
 
 void	fdf_readmap(t_fdf *fdf)
 {

@@ -6,7 +6,7 @@
 /*   By: thomathi <thomathi@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 17:05:15 by thomathi          #+#    #+#             */
-/*   Updated: 2022/08/18 12:25:38 by thomathi         ###   ########.fr       */
+/*   Updated: 2022/08/18 22:53:26 by thomathi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	dv6ted4(t_fdf *fdf, t_bres *s, int *i0)
 {
-	int i;
-	int c;
-	
+	int	i;
+	int	c;
+
 	i = 0;
 	while (i < s->dx_x)
 	{
@@ -35,9 +35,9 @@ void	dv6ted4(t_fdf *fdf, t_bres *s, int *i0)
 
 void	ep6dts(t_fdf *fdf, t_bres *s, int *i0)
 {
-	int i;
-	int c;
-	
+	int	i;
+	int	c;
+
 	i = 0;
 	while (i < s->dy_x)
 	{
@@ -56,7 +56,7 @@ void	ep6dts(t_fdf *fdf, t_bres *s, int *i0)
 
 void	select_engine(t_fdf *fdf, int *i0, int *i1)
 {
-	t_bres *s;
+	t_bres	*s;
 
 	s = (t_bres *)malloc(sizeof(t_bres));
 	s->ex = abs(i1[0] - i0[0]);
@@ -67,7 +67,6 @@ void	select_engine(t_fdf *fdf, int *i0, int *i1)
 	s->dy_x = s->ey;
 	s->x_inc = 1;
 	s->y_inc = 1;
-
 	if (i0[0] > i1[0])
 		s->x_inc = -1;
 	if (i0[1] > i1[1])
@@ -77,4 +76,3 @@ void	select_engine(t_fdf *fdf, int *i0, int *i1)
 	if (s->dx_x < s->dy_x)
 		ep6dts(fdf, s, i0);
 }
-

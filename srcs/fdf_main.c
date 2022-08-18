@@ -6,7 +6,7 @@
 /*   By: thomathi <thomathi@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 16:50:04 by thomathi          #+#    #+#             */
-/*   Updated: 2022/08/18 21:12:24 by thomathi         ###   ########.fr       */
+/*   Updated: 2022/08/18 22:50:51 by thomathi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	put_pixel(t_fdf *fdf, int x, int y, int c)
 {
 	char	*addr;
- 
+
 	x = x + fdf->x_cor;
 	y = y + fdf->y_cor;
 	if ((x >= 0 && x < WIDTH) && (y >= 0 && y < HEIGHT))
@@ -72,8 +72,8 @@ void	fdf_bresenham_ep6dts(t_fdf *fdf, int x, int y)
 
 void	fdf_second(t_fdf *fdf)
 {
-	int x;
-	int y;
+	int	x;
+	int	y;
 
 	x = 0;
 	y = 0;
@@ -91,8 +91,8 @@ void	fdf_second(t_fdf *fdf)
 
 void	fdf_main(t_fdf *fdf)
 {
-	int x;
-	int y;
+	int	x;
+	int	y;
 
 	x = 0;
 	y = 0;
