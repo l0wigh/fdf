@@ -6,7 +6,7 @@
 /*   By: thomathi <thomathi@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 16:42:47 by thomathi          #+#    #+#             */
-/*   Updated: 2022/08/18 20:44:07 by thomathi         ###   ########.fr       */
+/*   Updated: 2022/08/18 22:22:40 by thomathi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,27 @@ int	fdf_getinfos(int fd, int mode)
 	else
 	{
 		line_elem = ft_split(line, ' ');
-		while (line_elem[i])
+		while (line_elem && line_elem[i])
 			i++;
 	}
 	return (i);
 }
+
+int	fdf_readmap_loop(t_fdf *fdf, char **line_elem, int y)
+{
+	int x;
+
+	x = 0;
+	while (line_elem[x])
+	{
+		if (x > fdf->width)
+			fdf_err_exit(fdf, 1);
+		fdf->map[y][x] = ft_atoi(line_elem[x]);
+		x++;
+	}
+	return (x);
+}	
+
 
 void	fdf_readmap(t_fdf *fdf)
 {
@@ -64,16 +80,18 @@ void	fdf_readmap(t_fdf *fdf)
 	line_elem = ft_split(line, ' ');
 	while (line)
 	{
-		while (line_elem[x])
-		{
-			fdf->map[y][x] = ft_atoi(line_elem[x]);
-			x++;
-		}
+		if (y > fdf->height)
+			fdf_err_exit(fdf, 1);
+		x = fdf_readmap_loop(fdf, line_elem, y);
+		if (x < fdf->width)
+			fdf_err_exit(fdf, 1);
 		y++;
 		x = 0;
 		line = get_next_line(fdf->fd);
 		line_elem = ft_split(line, ' ');
 	}
+	if (y < fdf->height)
+		fdf_err_exit(fdf, 1);
 	return ;
 }
 

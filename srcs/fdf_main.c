@@ -6,7 +6,7 @@
 /*   By: thomathi <thomathi@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 16:50:04 by thomathi          #+#    #+#             */
-/*   Updated: 2022/08/18 19:48:27 by thomathi         ###   ########.fr       */
+/*   Updated: 2022/08/18 21:12:24 by thomathi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,14 +77,14 @@ void	fdf_second(t_fdf *fdf)
 
 	x = 0;
 	y = 0;
-	while (x < fdf->width)
+	while (x < fdf->width - 1)
 	{
 		fdf_bresenham_dv6ted4(fdf, x, fdf->height - 1);
 		x++;
 	}
 	while (y < fdf->height - 1)
 	{
-		fdf_bresenham_ep6dts(fdf, fdf->width, y);
+		fdf_bresenham_ep6dts(fdf, fdf->width - 1, y);
 		y++;
 	}
 }
@@ -99,7 +99,7 @@ void	fdf_main(t_fdf *fdf)
 	fdf->img_ptr = mlx_new_image(fdf->mlx_ptr, WIDTH, HEIGHT);
 	while (y < fdf->height - 1)
 	{
-		while (x < fdf->width)
+		while (x < fdf->width - 1)
 		{
 			fdf_bresenham_dv6ted4(fdf, x, y);
 			fdf_bresenham_ep6dts(fdf, x, y);

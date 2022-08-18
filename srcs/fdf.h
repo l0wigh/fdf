@@ -6,7 +6,7 @@
 /*   By: thomathi <thomathi@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 16:23:12 by thomathi          #+#    #+#             */
-/*   Updated: 2022/08/18 19:31:32 by thomathi         ###   ########.fr       */
+/*   Updated: 2022/08/18 22:20:08 by thomathi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,8 @@ void	fdf_colors(t_fdf *fdf);
 void	fdf_map_move(t_fdf *fdf, int code);
 void	fdf_map_zoom(t_fdf *fdf, int code);
 void	fdf_map_terrain(t_fdf *fdf, int code);
+void	fdf_err_exit(t_fdf *fdf, int err);
 void	fdf_debug(t_fdf *fdf);
+void	fdf_exit_procedure_bis(t_fdf *fdf);
 
 #endif

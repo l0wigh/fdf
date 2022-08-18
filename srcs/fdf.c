@@ -6,7 +6,7 @@
 /*   By: thomathi <thomathi@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 16:30:04 by thomathi          #+#    #+#             */
-/*   Updated: 2022/08/18 19:32:35 by thomathi         ###   ########.fr       */
+/*   Updated: 2022/08/18 22:34:55 by thomathi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ int	fdf_keyhook(int code, t_fdf *fdf)
 		fdf_map_move(fdf, code);
 	if (code == 69 || code == 78)
 		fdf_map_zoom(fdf, code);
-	if (code == 38 || code == 40)
-		fdf_map_terrain(fdf, code);
 	if (code == 36)
 		fdf_debug(fdf);
 	return (0);
@@ -36,9 +34,9 @@ void	fdf_initialize(t_fdf *fdf, char *file)
 	mlx_key_hook(fdf->mlx_win, fdf_keyhook, fdf);
 	mlx_hook(fdf->mlx_win, 17, 0, fdf_exit_procedure, fdf);
 	fdf->colors = malloc(sizeof(int) * 3);
-	fdf->colors[0] = 0x260900;
+	fdf->colors[0] = 0xc73067;
 	fdf->colors[1] = 0x4169e1;
-	fdf->colors[2] = 0xCAFBAE;
+	fdf->colors[2] = 0xABADBABE;
 	fdf->col_x = 0;
 	fdf->terrain = 8;
 	fdf->x_cor = 0;

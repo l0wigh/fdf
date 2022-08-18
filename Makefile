@@ -6,7 +6,7 @@
 #    By: thomathi <thomathi@student.42mulhouse.fr>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/22 14:08:35 by thomathi          #+#    #+#              #
-#    Updated: 2022/08/18 19:38:06 by thomathi         ###   ########.fr        #
+#    Updated: 2022/08/18 22:44:25 by thomathi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,6 @@ clean:
 	@printf "\033[2K\r${GRN}${TOTEM} [CLEAN]${RST} done$(END)\n"
 
 fclean: clean
-	@make clean -C minilibx_macos
 	@make fclean -C gnl
 	@make fclean -C ft_printf
 	@rm -f $(NAME)
