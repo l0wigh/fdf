@@ -6,7 +6,7 @@
 /*   By: thomathi <thomathi@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 17:05:15 by thomathi          #+#    #+#             */
-/*   Updated: 2022/08/16 18:43:45 by thomathi         ###   ########.fr       */
+/*   Updated: 2022/08/18 12:25:38 by thomathi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
 void	dv6ted4(t_fdf *fdf, t_bres *s, int *i0)
 {
 	int i;
+	int c;
 	
 	i = 0;
 	while (i < s->dx_x)
 	{
-		put_pixel(fdf, i0[0], i0[1]);
+		c = fdf->colors[fdf->col_x] - ((i0[2] + 1) * 30);
+		put_pixel(fdf, i0[0], i0[1], c);
 		i++;
 		i0[0] += s->x_inc;
 		s->ex -= s->dy;
@@ -34,11 +36,13 @@ void	dv6ted4(t_fdf *fdf, t_bres *s, int *i0)
 void	ep6dts(t_fdf *fdf, t_bres *s, int *i0)
 {
 	int i;
+	int c;
 	
 	i = 0;
 	while (i < s->dy_x)
 	{
-		put_pixel(fdf, i0[0], i0[1]);
+		c = fdf->colors[fdf->col_x] - ((i0[2] + 1) * 30);
+		put_pixel(fdf, i0[0], i0[1], c);
 		i++;
 		i0[1] += s->y_inc;
 		s->ey -= s->dx;

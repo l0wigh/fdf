@@ -6,11 +6,11 @@
 #    By: thomathi <thomathi@student.42mulhouse.fr>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/22 14:08:35 by thomathi          #+#    #+#              #
-#    Updated: 2022/08/16 17:18:10 by thomathi         ###   ########.fr        #
+#    Updated: 2022/08/18 19:38:06 by thomathi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-FILES = fdf fdf_errors fdf_init fdf_main fdf_engines
+FILES = fdf fdf_errors fdf_init fdf_main fdf_engines fdf_exit fdf_bonus fdf_debug
 
 BLU			= \033[0;34m
 GRN			= \033[0;32m
